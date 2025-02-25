@@ -1,0 +1,260 @@
+# Project Overview
+    The Telegram Backup Client is a C# application designed to automate the process of backing up messages and media from Telegram. This client will provide users with the ability to synchronize their Telegram data regularly, ensuring that all information from chats and groups is securely saved on their local machines. The application will feature a user-friendly graphical interface developed with React, which will launch automatically in a web browser upon starting the console application.
+
+    Key Features:
+	1.	Automatic Synchronization:
+	•	The client will enable users to schedule automatic backups at specified intervals (e.g., daily or weekly), ensuring that they always have the latest data saved without manual intervention.
+	2.	Comprehensive Data Retrieval:
+	•	The client will load all available data from selected chats and groups, including:
+	•	Messages (text and multimedia)
+	•	Media files (images, videos, audio)
+	•	Documents
+	•	User and chat information
+	3.	Organized File Structure:
+	•	The backed-up data will be structured in folders based on file types, making it easy for users to navigate and access their saved content.
+	4.	User-Friendly Interface:
+	•	A graphical interface built with React will provide users with an intuitive experience for managing backups and monitoring the synchronization process.
+	•	The interface will open automatically in a local web browser when the console application starts.
+	5.	Security Measures:
+	•	The application will implement token-based authentication for accessing the Telegram API.
+	•	Sensitive data will be encrypted before storage to protect user information.
+	6.	Logging and Documentation:
+	•	The client will maintain logs of operations performed, including successful backups and any errors encountered.
+	•	Comprehensive documentation will be provided for installation and usage instructions.
+
+    Conclusion:
+    The Telegram Backup Client aims to streamline the backup process for Telegram users, ensuring that all important data is securely stored and easily accessible. By automating synchronization and providing a clear interface, this application will enhance the user experience while prioritizing data security.
+
+
+# Personality
+    Teach me as like Senior Developer at FAANG
+   
+
+# Tech Stack
+    Backend (Core Application) – C#
+	•	Language: C# (.NET Core)
+	•	Framework: .NET Core 8 (or latest stable)
+	•	Telegram API: Telegram Bot API / TeleSharp or TLSharp (depending on whether a bot or user client is used)
+	•	Data Storage: Local file system (initially), with possible support for databases in the future
+	•	Security: Token-based authentication, optional encryption for sensitive data
+	•	Logging: Serilog for structured logging
+
+    Frontend (User Interface) – React
+	•	Language: JavaScript/TypeScript
+	•	Framework: React.js (Next.js if SSR is needed)
+	•	State Management: Zustand or Redux (if needed)
+	•	Styling: Tailwind CSS / Shadcn UI for a modern and responsive design
+	•	Communication: REST API or WebSocket (if real-time updates are needed)
+
+    Infrastructure & Deployment
+	•	Execution: Console application that launches a web interface on localhost
+	•	Process Management: Background tasks for scheduled synchronization
+	•	Packaging: Single-file executable for ease of use
+
+# Error Fixing Process
+
+# Building Process
+
+# Our .env variables
+
+# Current File Structure
+
+# GitHub Push Process
+
+# Important
+
+# Other context
+
+# Comments
+     The Telegram Backup Client is designed with the following characteristics in mind:
+	1.	Reliable and Automated – The client runs seamlessly in the background, ensuring that backups are performed on schedule without requiring manual intervention.
+	2.	Comprehensive and Thorough – It doesn't just save messages but captures all available data, including multimedia, documents, and metadata, ensuring that nothing is lost.
+	3.	Organized and Structured – The backup files are neatly arranged by type, making retrieval and navigation effortless.
+	4.	User-Friendly and Accessible – While starting as a console application, it provides an intuitive React-based UI that launches automatically, allowing users to manage their backups easily.
+	5.	Secure and Private – User data is handled responsibly, with encryption for sensitive information and token-based authentication for secure Telegram API access.
+	6.	Minimalist but Powerful – The application keeps things simple for the user but robust under the hood, ensuring smooth performance and efficient data handling.
+
+# Telegram Backup Client Project Rules
+
+## Code Organization
+
+### Backend (C#)
+- Use Clean Architecture principles
+- Follow SOLID principles
+- Implement Repository pattern for data access
+- Use Dependency Injection
+- Implement proper exception handling
+- Use async/await for I/O operations
+- Document public APIs with XML comments
+
+### Frontend (React)
+- Use TypeScript for type safety
+- Implement component-based architecture
+- Follow React best practices
+- Use custom hooks for reusable logic
+- Implement proper error boundaries
+- Use proper state management
+- Follow accessibility guidelines
+
+## Naming Conventions
+
+### Backend
+- PascalCase for class names, public methods, and properties
+- camelCase for private fields and local variables
+- Use meaningful and descriptive names
+- Prefix interfaces with 'I'
+- Suffix services with 'Service'
+- Suffix repositories with 'Repository'
+
+### Frontend
+- PascalCase for component names
+- camelCase for functions and variables
+- Use meaningful and descriptive names
+- Suffix hooks with 'use'
+- Suffix context providers with 'Provider'
+
+## File Structure
+
+### Backend
+/Controllers
+- Handle HTTP requests
+- Input validation
+- Route mapping
+- Return appropriate HTTP responses
+
+/Services
+- Business logic implementation
+- Data processing
+- External service integration
+
+/Models
+- Domain models
+- DTOs
+- Request/Response models
+
+/Infrastructure
+- Database configuration
+- External service clients
+- Middleware
+- Logging
+
+### Frontend
+/components
+- Reusable UI components
+- Component-specific styles
+- Component tests
+
+/pages
+- Page components
+- Route definitions
+- Page-specific logic
+
+/services
+- API clients
+- External service integration
+- Data transformation
+
+/hooks
+- Custom React hooks
+- Shared state logic
+- Reusable behaviors
+
+/styles
+- Global styles
+- Theme definitions
+- Style utilities
+
+## Testing Requirements
+
+### Backend
+- Unit tests for business logic
+- Integration tests for API endpoints
+- Mock external dependencies
+- Test coverage > 80%
+
+### Frontend
+- Component unit tests
+- Integration tests
+- E2E tests for critical flows
+- Test coverage > 70%
+
+## Documentation Requirements
+
+### Backend
+- XML documentation for public APIs
+- README with setup instructions
+- API documentation
+- Architecture documentation
+
+### Frontend
+- Component documentation
+- Setup instructions
+- State management documentation
+- API integration documentation
+
+## Security Rules
+
+### Backend
+- Implement proper authentication
+- Validate all inputs
+- Sanitize outputs
+- Secure sensitive data
+- Use HTTPS
+- Implement rate limiting
+
+### Frontend
+- Sanitize user inputs
+- Implement CSP
+- Handle sensitive data properly
+- Secure local storage usage
+- Implement proper session management
+
+## Performance Guidelines
+
+### Backend
+- Implement caching where appropriate
+- Optimize database queries
+- Use async operations
+- Implement proper logging
+- Monitor memory usage
+
+### Frontend
+- Implement code splitting
+- Optimize bundle size
+- Use proper image optimization
+- Implement proper caching
+- Monitor performance metrics
+
+## Commit Guidelines
+- Use conventional commits
+- Write meaningful commit messages
+- Keep commits focused and atomic
+- Reference issues in commits
+- Review before pushing
+
+## Development Workflow
+1. Create feature branch
+2. Implement changes
+3. Write tests
+4. Update documentation
+5. Create pull request
+6. Code review
+7. Merge to main
+
+## Error Handling
+- Log all errors appropriately
+- Return proper error responses
+- Implement global error handling
+- Provide meaningful error messages
+- Track error metrics
+
+## Deployment Rules
+- Use CI/CD pipeline
+- Run all tests before deployment
+- Version all releases
+- Maintain changelog
+- Backup before deployment
+- Have rollback plan
+
+
+
